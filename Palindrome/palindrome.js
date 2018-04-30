@@ -14,16 +14,16 @@ $(document).ready(function() {
     3. Palindrome tests:
         a. "eye" ===> true                                                      
         b. "_eye" ==> true                                                      
-        c. "race car" ===> true                                                 
+        c. "race car" ===> true                                                 (w)                                   
         d. "not a palindrome" ===> false                                        
         e. "A man, a plan, a canal. Panama" ===> true                           
         f. "never odd or even" ===> true                                        
         g. "nope" ===> false                                                    
         h. "almostomla" ===> false                                              (x)
-        i. "My age is 0, 0 si ega ym." ===> true                                
-        j. "1 eye for of 1 eye." ===> false                                     
-        k. "0_0 (: /-\ :) 0_0" ===> true
-        l. "five|\_/|four" ===> true
+        i. "My age is 0, 0 si ega ym." ===> true                                (w)                               
+        j. "1 eye for of 1 eye." ===> false                                                   
+        k. "0_0 (: /-\ :) 0_0" ===> true                                        (w)
+        l. "five|\_/|four" ===> false
     */
 
     // var strArray;
@@ -37,10 +37,10 @@ $(document).ready(function() {
         // str = str.replace(",", "");
         // str = str.replace(/.|,/, "");
         str = str.replace(",", "").replace(".", "").replace("_", "");
-        console.log(str);
+        // console.log(str);
 
         var strArray = str.toLowerCase().split("");
-        // console.log(strArray);
+        console.log(strArray);
 
 
 
@@ -53,7 +53,7 @@ $(document).ready(function() {
             revStrArray.unshift(strArray[i]);
         }
 
-        // console.log(revStrArray);
+        console.log(revStrArray);
 
 
         for (i = 0; i < strArray.length; i++) {
@@ -73,6 +73,12 @@ $(document).ready(function() {
     
     palindrome("My age is 0, 0 si ega ym.");
     console.log(palindrome("My age is 0, 0 si ega ym."));
+
+    console.log(palindrome("a camera"));
+    console.log(palindrome("race car"));
+
+    // current issue: as the "for" loop checks the string arrays, the loop returns true if the last characters of the strings are equal,
+    // regardless of whether the string is a palindrome or not. 
 
 
     
