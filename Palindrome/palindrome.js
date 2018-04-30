@@ -22,11 +22,10 @@ $(document).ready(function() {
         // str = str.replace(/.|,|_/, "");
         // str = str.replace(",", "");
         // str = str.replace(/.|,/, "");
-        str = str.replace(",", "").replace(".", "").replace("_", "").replace(" ", "");
-        str = str.toLowerCase();
+        str = str.replace(",", "").replace(".", "").replace("_", "");
         console.log(str);
 
-        var strArray = str.split("");
+        var strArray = str.toLowerCase().split("");
         // console.log(strArray);
 
 
@@ -41,56 +40,25 @@ $(document).ready(function() {
         }
 
         // console.log(revStrArray);
-        revStr = revStrArray.join("");
-        console.log(revStr);
-
-        // if (strArray[4] === revStrArray[4]) {
-        //     return true;
-        // }
-
-        // else {
-        //     return false;
-        // }
 
 
-        // for (i = 0; i < strArray.length; i++) {
-        //     if (strArray[i] === revStrArray[i]) {
-        //         // isPalindrome();
-        //         return true;
-        //     }
+        for (i = 0; i < strArray.length; i++) {
+            if (strArray[i] === revStrArray[i]) {
+                // isPalindrome();
+                return true;
+            }
 
-        //     else if (strArray[i] != revStrArray[i]) {
-        //         // notPalindrome();
-        //         return false;
-        //     }
-        // }
-
-        // for (i = 0; i < strArray.length; i++) {
-        //     if (strArray[i] != revStrArray[i]) {
-        //         return false;
-        //     }
-
-        //     else {
-        //         return true;
-        //     }
-        // }
-
-        if (str === revStr) {
-            return true;
+            else if (strArray[i] != revStrArray[i]) {
+                // notPalindrome();
+                return false;
+            }
         }
-
-        else {
-            return false;
-        }
-
+        // Good luck!
+        // return true;
     }
     
-    // console.log(palindrome("My age is 0, 0 si ega ym."));
-
-    // console.log(palindrome("almostomla"));
-
-    console.log(palindrome("_eye"));
-    console.log(palindrome("race car"));
+    palindrome("My age is 0, 0 si ega ym.");
+    console.log(palindrome("My age is 0, 0 si ega ym."));
 
 
     
