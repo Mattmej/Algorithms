@@ -10,6 +10,20 @@ $(document).ready(function() {
         c. Compare the two arrays.
             i. If all the elements match, then the string is a palindrome.
             ii. If not, the string is not a palindrome.
+
+    3. Palindrome tests:
+        a. "eye" ===> true                                                      
+        b. "_eye" ==> true                                                      
+        c. "race car" ===> true                                                 
+        d. "not a palindrome" ===> false                                        
+        e. "A man, a plan, a canal. Panama" ===> true                           
+        f. "never odd or even" ===> true                                        
+        g. "nope" ===> false                                                    
+        h. "almostomla" ===> false                                              (x)
+        i. "My age is 0, 0 si ega ym." ===> true                                
+        j. "1 eye for of 1 eye." ===> false                                     
+        k. "0_0 (: /-\ :) 0_0" ===> true
+        l. "five|\_/|four" ===> true
     */
 
     // var strArray;
