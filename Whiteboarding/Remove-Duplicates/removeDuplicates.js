@@ -14,10 +14,9 @@ var firstArray = ["a", "b", "r", "s", "r", "z", "b"];
 // var firstArray = [1, 2, 4, 100, 8, 4, 4, 2, 3, 1, 1, 9];
 
 // array with no duplicates
-// initially set to equal firstArray, but will have its items taken out if duplicates.
-// var finalArray = firstArray;
 var finalArray = [];
-// var isDuplicate = false;
+
+// array with duplicates
 var duplicateArray = [];
 
 // Now we will have to go through the firstArray and find a way to detect duplicate items.
@@ -52,43 +51,30 @@ for (i = 0; i < firstArray.length; i++) {                                       
     for (j = i + 1; j < firstArray.length; j++) {                               // loops through all other firstArray elements
         console.log("Inner Loop Index: " + j);
         console.log("Compared Item: " + firstArray[j] + "\n");
-        if (storedItem === firstArray[j]) {
+
+        // if the current item is equal to the one it is being compared to, then...
+        if (storedItem === firstArray[j]) {                                     
             console.log("\nDuplicate Item: " + firstArray[j] + "\n");
+
+            // pushes the item into the duplicateArray.
             duplicateArray.push(storedItem);
-            // isDuplicate = true;
-            // console.log()
-            // finalArray.splice(finalArray.indexOf(firstArray[j]), 1);
         }
 
+        // Otherwise, the loop will continue.
         else {
             continue;
-            // finalArray.push(storedItem);
-            // console.log("\nPushed Item: " + storedItem + "\n");
-            // isDuplicate = false;
         }
     }
 
-    // if (!isDuplicate) {
-    //     finalArray.push(storedItem);
-    //     console.log(storedItem + " pushed into finalArray!");
-    // }
-
+    // If the duplicateArray does NOT contain the storedItem, then...
     if (!duplicateArray.includes(storedItem)) {
+
+        // push the storedItem into the finalArray.
         finalArray.push(storedItem);
         console.log(storedItem + " pushed into finalArray!");
     }
 
-    // else {
-
-    // }
-    isDuplicate = false;
 }
 
+// Display the final array.
 console.log(finalArray);
-
-
-
-// for (i = 0; i < firstArray.length-1; i++) {
-//     storedItem = firstArray[i];
-
-// }
