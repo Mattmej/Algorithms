@@ -10,14 +10,15 @@ This array will be the first array, but with no duplicate members.
 */
 
 // initial array to be passed in
-// var firstArray = ["a", "b", "r", "s", "r", "z", "b"];
-var firstArray = [1, 2, 4, 100, 8, 4, 4, 2, 3, 1, 1, 9];
+var firstArray = ["a", "b", "r", "s", "r", "z", "b"];
+// var firstArray = [1, 2, 4, 100, 8, 4, 4, 2, 3, 1, 1, 9];
 
 // array with no duplicates
 // initially set to equal firstArray, but will have its items taken out if duplicates.
 // var finalArray = firstArray;
 var finalArray = [];
-var isDuplicate = false;
+// var isDuplicate = false;
+var duplicateArray = [];
 
 // Now we will have to go through the firstArray and find a way to detect duplicate items.
 // I will create a variable to hold a certain item to be checked against other items.
@@ -53,7 +54,8 @@ for (i = 0; i < firstArray.length; i++) {                                       
         console.log("Compared Item: " + firstArray[j] + "\n");
         if (storedItem === firstArray[j]) {
             console.log("\nDuplicate Item: " + firstArray[j] + "\n");
-            isDuplicate = true;
+            duplicateArray.push(storedItem);
+            // isDuplicate = true;
             // console.log()
             // finalArray.splice(finalArray.indexOf(firstArray[j]), 1);
         }
@@ -66,7 +68,12 @@ for (i = 0; i < firstArray.length; i++) {                                       
         }
     }
 
-    if (!isDuplicate) {
+    // if (!isDuplicate) {
+    //     finalArray.push(storedItem);
+    //     console.log(storedItem + " pushed into finalArray!");
+    // }
+
+    if (!duplicateArray.includes(storedItem)) {
         finalArray.push(storedItem);
         console.log(storedItem + " pushed into finalArray!");
     }
