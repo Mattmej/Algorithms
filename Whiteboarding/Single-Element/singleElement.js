@@ -45,4 +45,6 @@ for (i = 0; i < intArray.length; i++) {
 
 // Turn the one-entry uniqueArray into a string.
 var uniqueNum = uniqueArray.toString();
+
+// displays the unique number to the console.
 console.log(uniqueNum);
