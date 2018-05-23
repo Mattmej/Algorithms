@@ -23,20 +23,26 @@ var uniqueArray = [];
 
 console.log(intArray);
 
+// Loop through elements of intArray
 for (i = 0; i < intArray.length; i++) {
 
     currentNum = intArray[i];
 
+    // Loop through all elements of intArray after currentNum
     for (j = i + 1; j < intArray.length; j++) {
         if (currentNum === intArray[j]) {
             duplicateArray.push(currentNum);
         }
     }
 
+    // if the currentNum is NOT in the duplicateArray
     if (!duplicateArray.includes(currentNum)) {
+
+        // push the currentNum into the uniqueArray.
         uniqueArray.push(currentNum);
     }
 }
 
+// Turn the one-entry uniqueArray into a string.
 var uniqueNum = uniqueArray.toString();
 console.log(uniqueNum);
