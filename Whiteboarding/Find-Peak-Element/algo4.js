@@ -40,9 +40,9 @@ Game plan:
 
 */
 
-// var numArray = [1, 2, 3, 1, 5, 7, -1];      // peak element will be 7
+var numArray = [1, 2, 3, 1, 5, 7, -1];      // peak element will be 7
 
-var numArray = [6, 6, 6, 6, 9, 1]
+// var numArray = [6, 6, 6, 6, 9, 1]
 
 for (i = 0; i < numArray.length - 1; i++) { // loop from i = 0 to i = 5
     var num1 = numArray[i];
@@ -58,4 +58,5 @@ for (i = 0; i < numArray.length - 1; i++) { // loop from i = 0 to i = 5
     }
 }
 
-alert("The peak element is " + storedNum);
+// alert("The peak element is " + storedNum);
+console.log("The peak element is " + storedNum);
